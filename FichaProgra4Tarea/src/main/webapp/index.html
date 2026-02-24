@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ficha</title>
+    <style>
+        .Encabezado
+    {
+        display:flex;
+        flex-direction:row;
+        background-color: cornflowerblue;
+        padding:10px;
+        border:2px solid white;
+        gap:100px
+    }
+    .Cuerpo
+    {
+        display:flex;
+        flex-direction:column;
+        background-color:lightpink;
+        padding:10px;
+        border:2px solid white;
+        gap:50px
+    }
+    .Pie
+    {
+        display:flex;
+        flex-direction:column;
+        background-color:hotpink;
+        padding:10px;
+        border:2px solid white;
+        gap:50px
+    }
+    .Articulo{
+        width:45%;
+    }
+    .Autores
+    {
+        display:flex;
+        flex-direction:row;
+        background-color: forestgreen;
+        padding:10px;
+        border:2px forestgreen;
+        gap:100px
+    }
+    .FASE
+    {
+        display:flex;
+        flex-direction:row;
+        background-color: lightpink;
+        padding:10px;
+        border:2px forestgreen;
+        gap:100px
+    }</style>
+</head>
+<body>
+<div class="Encabezado">
+    <div class="Articulo"><div class="Titulo">SHS-HTTPS Enforcer: Enforcing HTTPS and preventing MITM Attacks
+        ACM SIGSOFT Software Engineering Notes, November 2013</div>
+        <div class="Autores">
+            <div class="A1"><img src="images/A1.jpg" class="A1"></div>
+            <div class="A2"><img src="images/A2.jpg" CLASS="A2"></div>
+            <div class="A3"><img src="images/A3.jpg" class="A3"></div></div>
+
+    </div> <div class="Estudiantes"><ul>
+    <li class="Estudiante">C.A.R Hoare</li>
+    <li class="Estudiante">Niklaus Wirth</li>
+    <li class="Estudiante">Erika Santos</li>
+</ul>
+</div></div>
+
+<div class="Cuerpo">
+    <div class="FASE">    PROBLEMA
+        <div>    <div>
+            Las conexiones HTTPS son seguras, pues son encriptadas y previenen problemas como el MITM (Man In The Middle). Sin embargo la petición inicial del browser al servidor, requerida en el proceso de "handshake" para establecerlas llaves de encriptación, es vulnerable (pues claramente aún no está encriptada).
+            Este artículo propone el uso de un "SHS-HTTPS Enforcer" que es un proceso tipo "demonio" que redirige las peticiones antes de que salgan del cliente, para verificar el URL en una lista de múltiples fuentes. Así, sin importar  cual browser se esté usando, la petición será verificada antes de dirigirse a su destino final.
+        </div>
+    </div>
+    </div>
+    <div class="FASE">    SOLUCIONES
+        <div>    <div>
+            Algunos browser (user agents), como Google Chrome y Firefox han atacado el problema
+            incluyendo listas estátias de URL's que sólo pueden ser accedidas sobre conexiones seguras HTTPS. El problema es que cada browser tiene su lista. Así un URL puede estar en una lista pero no en otra, y dependiendo del browser que se use la petición inicial podría ser vulnerada.
+
+        </div>
+        </div>
+    </div>
+    <div class="FASE">    EXPERIMENTO
+        <div>    <div>
+            La solución propuesta ha sido implementada usando como "demonio" servidor proxy Squid. Se ha experimentado con peticiones hacio URL's que están en la lista de un browser pero no en la de otros. La solución ha sido exitosa, asegurándo solo conexiones a sitios seguros y previniendo el problema MITM
+
+        </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="Pie">PIE</div>
+
+</body>
+</html>
