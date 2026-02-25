@@ -31,17 +31,40 @@
         border:2px solid white;
         gap:50px
     }
+    .Titulo{
+        color:white;
+        font-size:24px;
+        text-align: center;
+        font-weight: normal;
+    }
     .Articulo{
-        width:45%;
+        width:30%;
     }
     .Autores
     {
         display:flex;
         flex-direction:row;
-        background-color: forestgreen;
+        background-color: cornflowerblue;
         padding:10px;
-        border:2px forestgreen;
+        border:2px cornflowerblue;
         gap:100px
+    }
+    .Autores img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .Autores div{
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .Autores div:hover{
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 15px rgba(0,0,0,0.3);
+        cursor: pointer;
     }
     .FASE
     {
@@ -51,16 +74,32 @@
         padding:10px;
         border:2px forestgreen;
         gap:100px
-    }</style>
+    }
+    .TituloFase{
+        font-weight: bold;
+        font-size: 20px;
+        color: darkred;
+    }
+    </style>
 </head>
 <body>
 <div class="Encabezado">
     <div class="Articulo"><div class="Titulo">SHS-HTTPS Enforcer: Enforcing HTTPS and preventing MITM Attacks
         ACM SIGSOFT Software Engineering Notes, November 2013</div>
         <div class="Autores">
-            <div class="A1"><img src="images/A1.jpg" class="A1"></div>
-            <div class="A2"><img src="images/A2.jpg" CLASS="A2"></div>
-            <div class="A3"><img src="images/A3.jpg" class="A3"></div></div>
+            <a href="autores.html">
+                <div class="A1">
+                <img src="images/A1.jpg" class="A1"><br>Suganavesh B</div></a>
+
+            <a href="#hari">
+                <div class="A2">
+                <img src="images/A2.jpg" CLASS="A2"><br>Hari Prasath R</div></a>
+            <a href="#selva"><div class="A3">
+                <img src="images/A3.jpg" class="A3"><br>Selvakumar S</div></a>
+
+
+
+</div>
 
     </div> <div class="Estudiantes"><ul>
     <li class="Estudiante">C.A.R Hoare</li>
@@ -70,14 +109,14 @@
 </div></div>
 
 <div class="Cuerpo">
-    <div class="FASE">    PROBLEMA
+    <div class="FASE">    <div class="TituloFase">PROBLEMA</div>
         <div>    <div>
             Las conexiones HTTPS son seguras, pues son encriptadas y previenen problemas como el MITM (Man In The Middle). Sin embargo la petición inicial del browser al servidor, requerida en el proceso de "handshake" para establecerlas llaves de encriptación, es vulnerable (pues claramente aún no está encriptada).
             Este artículo propone el uso de un "SHS-HTTPS Enforcer" que es un proceso tipo "demonio" que redirige las peticiones antes de que salgan del cliente, para verificar el URL en una lista de múltiples fuentes. Así, sin importar  cual browser se esté usando, la petición será verificada antes de dirigirse a su destino final.
         </div>
     </div>
     </div>
-    <div class="FASE">    SOLUCIONES
+    <div class="FASE">    <div class="TituloFase">SOLUCIONES</div>
         <div>    <div>
             Algunos browser (user agents), como Google Chrome y Firefox han atacado el problema
             incluyendo listas estátias de URL's que sólo pueden ser accedidas sobre conexiones seguras HTTPS. El problema es que cada browser tiene su lista. Así un URL puede estar en una lista pero no en otra, y dependiendo del browser que se use la petición inicial podría ser vulnerada.
@@ -85,7 +124,7 @@
         </div>
         </div>
     </div>
-    <div class="FASE">    EXPERIMENTO
+    <div class="FASE">    <div class="TituloFase">EXPERIMENTO</div>
         <div>    <div>
             La solución propuesta ha sido implementada usando como "demonio" servidor proxy Squid. Se ha experimentado con peticiones hacio URL's que están en la lista de un browser pero no en la de otros. La solución ha sido exitosa, asegurándo solo conexiones a sitios seguros y previniendo el problema MITM
 
@@ -95,7 +134,7 @@
 
 </div>
 
-<div class="Pie">PIE</div>
+<div class="Pie">El PDF del articulo completo puede ser consultado aqui y la lista de referencias aqui.</div>
 
 </body>
 </html>
