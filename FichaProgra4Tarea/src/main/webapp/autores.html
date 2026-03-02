@@ -3,17 +3,18 @@
 <head>
     <title>Autores</title>
     <style>
+
         .Titulo {
             font-weight: bold;
             font-size: 28px;
             color: white;
             text-align: center;
-            background-color: cornflowerblue;
+            background-color: #547AA5;
             padding: 20px;
         }
 
         .Autor {
-            margin: 40px;
+            margin: 50px;
         }
 
         .EncabezadoAutor {
@@ -25,18 +26,18 @@
 
         .Nombre {
             font-size: 22px;
+            color:#9E2B25;
             font-weight: bold;
         }
 
         .Cargo {
-            font-size: 18px;
-            color: gray;
+            font-size: 22px;
+            color:#9E2B25;
         }
 
         .ContenidoAutor {
             display: flex;
             gap: 30px;
-            align-items: flex-start;
         }
 
         .ContenidoAutor img {
@@ -47,22 +48,34 @@
         }
 
         .Descripcion {
-            flex: 1;
-            background-color: white;
+            background-color: #DC9596;
             padding: 20px;
             border-radius: 20px;
-            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
             line-height: 1.6;
         }
 
+        .Regresar {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #547AA5;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
     </style>
 </head>
+
 <body>
 
 <div class="Titulo">AUTORES</div>
 
-
-<div class="Autor">
+<div class="Autor" id="A1">
 
     <div class="EncabezadoAutor">
         <div class="Nombre">Suganavesh B</div>
@@ -72,12 +85,101 @@
     <div class="ContenidoAutor">
         <img src="images/A1.jpg">
 
-        <div class="Descripcion">
-         jjjjjjjj
+        <div class="InfoAutor">
+
+            <div class="Descripcion">
+                <strong>About</strong><br><br>
+                Interested in problems of scale and/or speed. Specialised in building large scale machine learning systems, workflow management systems.
+                Currently Senior Engineer in a team that owns one of the largest Computer Vision driven recommender systems at Amazon.
+            </div>
+
+            <div class="Descripcion">
+                <strong>Experience</strong><br><br>
+                <b>Amazon</b><br>
+                Senior Software Engineer (Feb 2023 - Present)<br><br>
+
+                <b>Jagriti Yatra</b><br>
+                Dec 2015 - Jan 2016<br><br>
+
+                <b>Vortex '13</b><br>
+                Jan 2013 - May 2013
+            </div>
+
         </div>
     </div>
-
 </div>
+
+<div class="Autor" id="A2">
+
+    <div class="EncabezadoAutor">
+        <div class="Nombre">Hari Prasath R</div>
+        <div class="Cargo">R&D Executive Engineer</div>
+    </div>
+
+    <div class="ContenidoAutor">
+        <img src="images/A2.jpg">
+
+        <div class="InfoAutor">
+
+            <div class="Descripcion">
+                <strong>About</strong><br><br>
+                R&D Executive Engineer at ABB. Ex-LG Electronics.
+            </div>
+
+            <div class="Descripcion">
+                <strong>Experience</strong><br><br>
+                <b>ABB</b><br>
+                Research and Development Engineer<br><br>
+
+                <b>LG Soft India</b><br>
+                Embedded Software Developer<br><br>
+
+                <b>Emertxe Information Technologies</b><br>
+                Intern
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="Autor" id="A3">
+
+    <div class="EncabezadoAutor">
+        <div class="Nombre">Selvakumar S</div>
+        <div class="Cargo">Professor (HAG) and Former Director, IIIT Una (HP)</div>
+    </div>
+
+    <div class="ContenidoAutor">
+        <img src="images/A3.jpg">
+
+        <div class="InfoAutor">
+
+            <div class="Descripcion">
+                <strong>About</strong><br><br>
+                Computer Networks, Group communication in High-Speed Networks, Routing, Multimedia Communication, Scheduling for QoS guarantee, Mobile Networks, Network Computing, Distributed Systems, Collaborative Computing, Wireless Sensor Networks, and Network Security
+            </div>
+
+            <div class="Descripcion">
+                <strong>Experience</strong><br><br>
+                <b>Professor (HAG)</b><br>
+                26.12.2023
+                Professor (HAG) and Former Director<br><br>
+
+                <b>Indian Institute of Information Technology Una Director</b><br>
+                05-07-2018 to 22-12-2023
+                Director<br><br>
+
+                <b>National Institute of Technology</b><br>
+                Professor
+                26-08-2000 to 04-07-2018
+                Professor
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<a href="index.html" class="Regresar">Regresar</a>
 
 </body>
 </html>

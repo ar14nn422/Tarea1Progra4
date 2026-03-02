@@ -2,41 +2,57 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Ficha</title>
     <style>
+        body {
+            background-image: url("images/background1.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
         .Encabezado
     {
         display:flex;
         flex-direction:row;
-        background-color: cornflowerblue;
+        background-color: #547AA5;
         padding:10px;
         border:2px solid white;
-        gap:100px
+        gap:200px
     }
     .Cuerpo
     {
         display:flex;
         flex-direction:column;
-        background-color:lightpink;
-        padding:10px;
+        background-color:#DC9596;
+        padding:100px;
         border:2px solid white;
         gap:50px
     }
     .Pie
     {
-        display:flex;
-        flex-direction:column;
-        background-color:hotpink;
+        border-radius: 20px;
+        color: #9E2B25;
+        width: 95%;
+        margin: 10px auto;
+        text-align: center;
+        background-color:#F6AE2D;
         padding:10px;
-        border:2px solid white;
-        gap:50px
+        border:2px hotpink;
     }
     .Titulo{
-        color:white;
-        font-size:24px;
+        color:#9E2B25;
+        font-size:26px;
         text-align: center;
-        font-weight: normal;
+        font-weight: bold;
     }
+        .Subtitulo{
+            font-size: 15px;
+            color:black;
+            text-align: center;
+            margin-top: 5px;
+        }
     .Articulo{
         width:30%;
     }
@@ -44,9 +60,9 @@
     {
         display:flex;
         flex-direction:row;
-        background-color: cornflowerblue;
+        background-color: #547AA5;
         padding:10px;
-        border:2px cornflowerblue;
+        border:2px #547AA5;
         gap:100px
     }
     .Autores img{
@@ -70,41 +86,50 @@
     {
         display:flex;
         flex-direction:row;
-        background-color: lightpink;
+        background-color: #DC9596;
         padding:10px;
-        border:2px forestgreen;
+        border:2px #C2D3CD;
         gap:100px
     }
     .TituloFase{
         font-weight: bold;
         font-size: 20px;
-        color: darkred;
+        color: #9E2B25;
+    }
+    .Estudiantes{
+        font-size:15px;
+        color:#2A0C4E;
+    }
+    a{
+        text-decoration:none;
+        color:inherit;
     }
     </style>
 </head>
 <body>
 <div class="Encabezado">
-    <div class="Articulo"><div class="Titulo">SHS-HTTPS Enforcer: Enforcing HTTPS and preventing MITM Attacks
-        ACM SIGSOFT Software Engineering Notes, November 2013</div>
+    <div class="Articulo">
+
+        <div class="Titulo">SHS-HTTPS Enforcer: Enforcing HTTPS and preventing MITM Attacks</div>
+        <div class="Subtitulo">ACM SIGSOFT Software Engineering Notes, November 2013</div>
         <div class="Autores">
-            <a href="autores.html">
+            <a href="autores.html#A1">
                 <div class="A1">
                 <img src="images/A1.jpg" class="A1"><br>Suganavesh B</div></a>
 
-            <a href="#hari">
+            <a href="autores.html#A2">
                 <div class="A2">
                 <img src="images/A2.jpg" CLASS="A2"><br>Hari Prasath R</div></a>
-            <a href="#selva"><div class="A3">
+            <a href="autores.html#A3"><div class="A3">
                 <img src="images/A3.jpg" class="A3"><br>Selvakumar S</div></a>
 
 
 
 </div>
 
-    </div> <div class="Estudiantes"><ul>
-    <li class="Estudiante">C.A.R Hoare</li>
-    <li class="Estudiante">Niklaus Wirth</li>
-    <li class="Estudiante">Erika Santos</li>
+    </div> <div class="Estudiantes">Estudiantes<ul>
+    <li class="Estudiante"><img src="images/estudiante.png">C.A.R Hoare</li>
+    <li class="Estudiante"><img src="images/estudiante.png">Niklaus Wirth</li>
 </ul>
 </div></div>
 
@@ -134,7 +159,11 @@
 
 </div>
 
-<div class="Pie">El PDF del articulo completo puede ser consultado aqui y la lista de referencias aqui.</div>
-
+<div class="Pie">
+    El PDF del articulo completo puede ser consultado
+    <a href="Articulo.pdf">aqui</a>
+    y la lista de referencias
+    <a href="referencias.html">aqui</a>.
+</div>
 </body>
 </html>
